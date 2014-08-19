@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <package name="default" namespace="/" extends="struts-default">
+		<!-- <default-action-ref name="index"></default-action-ref> -->
+		
+		<action name="registation" class="com.my.actions.RegistationAction" method="register">
+            <result name="success">/pages/registation/registation_success.jsp</result>
+            <result name="fail">/pages/registation/registation_fail.jsp</result>
+            <result name="exists">/pages/registation/registation_exists.jsp</result>
+            <result name="not_match">/pages/registation/registation_not_match.jsp</result>
+        </action>
+    </package>
+</struts>
